@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "npx knex migrate:latest && node src/server.js",
+    "prestart": "npx knex migrate:latest",
+    "start": "node src/server.js",
     "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
