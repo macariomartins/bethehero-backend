@@ -1,3 +1,7 @@
 const app = require('./app');
 
-app.listen(3333);
+var port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+    console.log('This app is listening port ' + port);
+});
